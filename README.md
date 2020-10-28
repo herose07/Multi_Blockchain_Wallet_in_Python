@@ -41,3 +41,19 @@ The wallet uses a command line tool, hd-wallet-derive, that supports not only BI
 ![image](https://user-images.githubusercontent.com/65314799/97379063-e23e7280-1891-11eb-9d55-bdd025245bf3.png)
 
 ### Ethereum Transaction
+
+* Due to a bug in web3.py, I sent a transaction or two with MyCrypto first, since the w3.eth.generateGasPrice() function does not work with an empty chain. 
+* Sent a transaction from a pre-funded address in ganache to another, then copied the txid into MyCrypto's TX Status
+
+**Screenshot of MyCrypto transaction:**
+
+![image](https://user-images.githubusercontent.com/65314799/97379728-69401a80-1893-11eb-8114-4ec4e4740f3e.png)
+
+* Sent another transaction with the following snippet of code:
+    - `eth_sender_account = priv_key_to_account(ETH,coins["eth"][0]['privkey'])`
+    - `eth_recipient_address = coins["eth"][1]["address"]`
+    - `send_tx(ETH, eth_sender_account, eth_recipient_address, 2)`
+    
+**Screenshot of the test transaction from ganache:**
+
+![image](https://user-images.githubusercontent.com/65314799/97379743-765d0980-1893-11eb-94d1-0bcba8065f23.png)
