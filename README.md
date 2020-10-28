@@ -30,3 +30,14 @@ The wallet uses a command line tool, hd-wallet-derive, that supports not only BI
 
 ### Bitcoin Testnet Transaction
 
+1. Funded a BTCTEST address using a testnet faucet.
+2. Used a block explorer to watch transactions on the address.
+3. Sent a transaction to another testnet address.
+    - Used the following snippet of code to send the transaction (rest of code can be found in wallet.py):
+        - `btctest_sender_account = priv_key_to_account(BTCTEST,coins["btc-test"][0]['privkey'])`
+        - `btctest_recipient_address = coins["btc-test"][1]["address"]`
+        - `send_tx(BTCTEST, btctest_sender_account, btctest_recipient_address, .0001)`
+        
+![image](https://user-images.githubusercontent.com/65314799/97379063-e23e7280-1891-11eb-9d55-bdd025245bf3.png)
+
+### Ethereum Transaction
