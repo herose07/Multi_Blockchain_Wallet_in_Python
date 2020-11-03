@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/65314799/98048651-c4be5b00-1df3-11eb-902f-fa2055714897.png)
+
 # Multi_Blockchain_Wallet_in_Python
 
 The goal of this project was to create a multi-blockchain wallet in python that can hold multiple crypto-assets. 
